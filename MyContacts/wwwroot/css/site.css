@@ -1,0 +1,63 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn-edit {
+    background-color: #28a745; /* Green color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding */
+}
+
+    .btn-edit:hover {
+        opacity: 0.8; /* Reduce opacity on hover */
+    }
+
+.btn-delete {
+    background-color: #dc3545; /* Red color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding */
+}
+
+.btn-details {
+    background-color: #17a2b8; /* Blue color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding */
+}
+
+    .btn-delete:hover,
+    .btn-details:hover {
+        opacity: 0.8; /* Reduce opacity on hover */
+    }
+
+h1 {
+    background-color: #f0f0f0; /* Background color */
+    text-align: center; /* Center alignment */
+    padding: 20px; /* Add padding for better readability */
+    color: #333; /* Text color */
+}
+

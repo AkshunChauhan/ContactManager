@@ -1,0 +1,11 @@
+﻿@model MyContacts.Models.Contact
+@{
+    ViewBag.Title = "Delete";
+}
+<form asp-action="delete" method="post">
+    <input type="hidden" asp-for="ContactId" />
+<h2>Are you sure you want to delete @Model.FirstName @Model.LastName ?</h2>
+<button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+

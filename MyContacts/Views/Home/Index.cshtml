@@ -1,0 +1,41 @@
+﻿@model List<MyContacts.Models.Contact>
+@{
+    ViewData["Title"] = "Contact List";
+}
+<h1>Contact Manager</h1>
+<a class="btn btn-primary" asp-controller="Contact" asp-action="Add">Add Contact</a>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>@Html.DisplayNameFor(model => model[0].Email)</th>
+                <th>Phone Number</th>
+                <th>Category</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Contact" asp-action="Edit" asp-route-id="@item.ContactId" asp-route-slug="@item.Slug">@Html.DisplayFor(modelItem => item.FirstName)</a>
+                    </td>
+                    <td>
+                        <a asp-controller="Contact" asp-action="Edit" asp-route-id="@item.ContactId" asp-route-slug="@item.Slug">@Html.DisplayFor(modelItem => item.LastName)</a>
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Category.Name)</td>
+                    <td>
+                        <a class="btn btn-edit" asp-controller="Contact" asp-action="Edit" asp-route-id="@item.ContactId">Edit</a>
+                        <a class="btn btn-delete" asp-controller="Contact" asp-action="Delete" asp-route-id="@item.ContactId">Delete</a>
+                        <a class="btn btn-details" asp-controller="Contact" asp-action="Details" asp-route-id="@item.ContactId" asp-route-slug="@item.Slug">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
